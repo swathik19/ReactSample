@@ -1,26 +1,40 @@
+import axios from 'axios';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ChartComponent from './ChildComponents/ChartComponent';
+import TableComponent from './ChildComponents/TableComponent';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface IAppComponentState {
+  users: [];
 }
 
-export default App;
+export default class App extends React.Component<any, IAppComponentState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      users: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get(`https://jsonplaceholder.typicode.com/users`)
+      .then(res => {
+        const users = res.data;
+        this.setState({ users: users });
+      })
+  }
+
+  public render() {
+    if (this.state.users) {
+      return (
+        <div>
+          <div className="container">
+          </div>
+          <TableComponent users={this.state.users} />
+          <ChartComponent/>
+        </div>
+      );
+    }
+    return null;
+  }
+}
