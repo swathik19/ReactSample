@@ -44,3 +44,14 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+<!-- Highcharts -->
+https://www.highcharts.com/blog/tutorials/highcharts-react-wrapper/
+https://www.npmjs.com/package/highcharts-react-official
+https://www.highcharts.com/demo
+
+<!-- React -->
+
+
+<!-- axios -->
+https://www.digitalocean.com/community/tutorials/react-axios-react
