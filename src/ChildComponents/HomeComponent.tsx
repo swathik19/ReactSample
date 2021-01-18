@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import Layout from '../Navigation/Layout';
 import ChartComponent from './ChartComponent';
 import TableComponent from './TableComponent';
 
@@ -26,12 +27,14 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
   public render() {
     if (this.state.users) {
       return (
+        <Layout>
         <div>
           <div className="container">
           </div>
           <TableComponent users={this.state.users} />
           <ChartComponent/>
         </div>
+        </Layout>
       );
     }
     return null;
