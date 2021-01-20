@@ -7,6 +7,7 @@ export default class Layout extends React.Component {
         return (
             <div>
                 <NavSidebar />
+                <br />
                 <div>
                     <main>
                         <section>
