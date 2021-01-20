@@ -9,11 +9,9 @@ interface ITableComponentState {
   columns: any;
 }
 
-
 export default class TableComponent extends React.Component<ITableComponentProps, ITableComponentState> {
   constructor(props: ITableComponentProps) {
     super(props);
-    console.log(this.props.users);
     this.state = {
       columns: [
         {
