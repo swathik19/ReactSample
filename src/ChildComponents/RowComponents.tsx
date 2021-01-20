@@ -1,5 +1,5 @@
 import React from 'react';
-import ChartComponent from './ChartComponent';
+import TableChartComponent from './TableChartComponent';
 
 interface IRowComponentProps {
     user: any;
@@ -11,12 +11,21 @@ export default class RowComponent extends React.Component<IRowComponentProps, an
     public render() {
         return (
             <tr id={this.props.user.id}>
-                <th scope="row">{this.props.user.id}</th>
-                <td>{this.props.user.name}</td>
-                <td>{this.props.user.address.city}</td>
-                <td>{this.props.user.website}</td>
-                <td>ChartComponent</td>
+                <td className="col-md-2">{this.props.user.id}</td>
+                <td className="col-md-2">{this.props.user.name}</td>
+                <td className="col-md-2">{this.props.user.address.city}</td>
+                <td className="col-md-2">{this.props.user.website}</td>
+                <td className="col-md-2">{this.getChart()}</td>
             </tr>
+        );
+    }
+
+    private getChart() {
+        return (
+            <div className="col-md-2">
+                <div className="row" >
+                <TableChartComponent id={this.props.user.id} />
+                </div></div>
         );
     }
 }

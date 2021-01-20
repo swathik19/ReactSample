@@ -59,7 +59,11 @@ export default class ChartComponent extends React.Component {
                 name: 'Janet',
                 data: [3, 0, 4, 4, 3],
                 stack: 'female'
-            }]
+            }],
+            renderTo:"mediamix#{akid.to_s}",
+            credits: {
+                enabled: false
+            }
         };
     }
 }
