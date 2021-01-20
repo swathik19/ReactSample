@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React from 'react';
-import Layout from '../Navigation/Layout';
-import ChartComponent from './ChartComponent';
-import TableComponent from './TableComponent';
+import Layout from '../../Navigation/Layout';
+import ChartComponent from './Chart/ChartComponent';
+import InformationComponent from './Information/InformationComponent';
+import TableComponent from './Table/TableComponent';
 
 interface IHomeComponentState {
   users: [];
@@ -28,12 +29,13 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
     if (this.state.users) {
       return (
         <Layout>
-        <div>
-          <div className="container">
+          <div>
+            <div className="container">
+              <InformationComponent />
+              <TableComponent users={this.state.users} />
+              <ChartComponent />
+            </div>
           </div>
-          <TableComponent users={this.state.users} />
-          <ChartComponent/>
-        </div>
         </Layout>
       );
     }

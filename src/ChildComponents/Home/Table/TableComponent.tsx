@@ -18,8 +18,8 @@ export default class TableComponent extends React.Component<ITableComponentProps
 
   private getTable(): JSX.Element {
     return (
-      <div className="table-responsive">
-        <table className="table table-dark">
+      <div>
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Id</th>

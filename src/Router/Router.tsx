@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import AboutComponent from "../ChildComponents/AboutComponent";
-import HomeComponent from "../ChildComponents/HomeComponent";
+import AboutComponent from "../ChildComponents/About/AboutComponent";
+import HomeComponent from "../ChildComponents/Home/HomeComponent";
 
 export default class Router extends React.Component {
     public render() {

@@ -24,7 +24,7 @@ export default class TableChartComponent extends React.Component<ITableChartComp
             chart: {
                 type: 'bar',
                 height: 40,
-                length: 100
+                width: 50
             },
             title: false,
             xAxis: {
@@ -41,13 +41,13 @@ export default class TableChartComponent extends React.Component<ITableChartComp
             },
             series: [{
                 showInLegend: false,
-                data: [50]
+                data: [5]
             }, {
                 showInLegend: false,
-                data: [20]
+                data: [2]
             }, {
                 showInLegend: false,
-                data: [30]
+                data: [3]
             }],
             credits: {
                 enabled: false

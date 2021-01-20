@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../Navigation/Layout';
-import ChartComponent from './ChartComponent';
+import Layout from '../../Navigation/Layout';
+import ChartComponent from '../Home/Chart/ChartComponent';
 
 export default class AboutComponent extends React.Component {
     public render() {
