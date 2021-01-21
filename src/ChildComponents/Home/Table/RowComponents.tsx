@@ -11,11 +11,11 @@ export default class RowComponent extends React.Component<IRowComponentProps, an
     public render() {
         return (
             <tr id={this.props.user.id}>
-                <td >{this.props.user.id}</td>
+                <td className="text-info"><a href="#">{this.props.user.id}</a></td>
                 <td>{this.props.user.name}</td>
-                <td >{this.props.user.address.city}</td>
-                <td >{this.props.user.website}</td>
-                <td >{this.getChart()}</td>
+                <td>{this.props.user.address.city}</td>
+                <td>{this.props.user.website}</td>
+                <td>{this.getChart()}</td>
             </tr>
         );
     }

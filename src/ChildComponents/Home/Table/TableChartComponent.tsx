@@ -24,7 +24,7 @@ export default class TableChartComponent extends React.Component<ITableChartComp
             chart: {
                 type: 'bar',
                 height: 40,
-                width: 50
+                width: 50,
             },
             title: false,
             xAxis: {

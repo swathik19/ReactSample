@@ -10,6 +10,7 @@ export default class TableComponent extends React.Component<ITableComponentProps
   public render() {
     return (
       <div className="container">
+        <div className="font-weight-bold border"> Details Table </div>
         {this.getTable()}
       </div>
     );
@@ -18,7 +19,7 @@ export default class TableComponent extends React.Component<ITableComponentProps
   private getTable(): JSX.Element {
     return (
       <div>
-        <table className="table">
+        <table className="table table-striped table-borderless border">
           <thead>
             <tr>
               <th scope="col">Id</th>

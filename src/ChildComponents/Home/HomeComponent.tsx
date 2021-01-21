@@ -33,7 +33,6 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
             <div className="container">
               <InformationComponent />
               <TableComponent users={this.state.users} />
-              <ChartComponent />
             </div>
           </div>
         </Layout>
