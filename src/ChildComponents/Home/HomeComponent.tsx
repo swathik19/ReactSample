@@ -39,6 +39,9 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
         </Layout>
       );
     }
-    return null;
+    return (
+      <Layout>
+      </Layout>
+    );
   }
 }
