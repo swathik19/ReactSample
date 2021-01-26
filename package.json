@@ -1,7 +1,7 @@
 {
   "name": "sampleapp",
   "version": "0.1.0",
-  "homepage": "/sites/TestWeb/Shared%20Documents/ValueAddsTracker/__TestApp/build/",
+  "homepage": "/sites/TestWeb/Shared%20Documents/ValueAddsTracker/__TestApp/build/",  
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
