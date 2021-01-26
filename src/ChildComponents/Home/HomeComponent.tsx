@@ -3,6 +3,7 @@ import Layout from '../../Navigation/Layout';
 import InformationComponent from './Information/InformationComponent';
 import TableComponent from './Table/TableComponent';
 import * as data from '../../stub/data.json';
+import axios from 'axios';
 
 interface IHomeComponentState {
   details: any;
@@ -17,8 +18,21 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
   }
 
   componentDidMount() {
-    let value = data.value;
-    this.setState({ details: value });
+    if (process.env.NODE_ENV === "development") {
+      let value = data.value;
+      this.setState({ details: value });
+    }
+    else {
+      axios.get("https://cognizantonline.sharepoint.com/sites/TestWeb/_api/lists/getbytitle('ValueAddsList')/items", {
+        headers: {
+          "Content-Type": "application/json"
+        },
+      })
+      .then(res => {
+        const value = res.data.value;
+        this.setState({ details: value });
+      })
+    }
   }
 
   public render() {

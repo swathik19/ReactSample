@@ -17,6 +17,9 @@ export default class Router extends React.Component {
                     <Route exact path="/About">
                         <AboutComponent />
                     </Route>
+                    <Route>
+                        <HomeComponent />
+                    </Route>
                 </Switch>
             </BrowserRouter>
         );
