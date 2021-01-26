@@ -1,38 +1,34 @@
-import axios from 'axios';
 import React from 'react';
 import Layout from '../../Navigation/Layout';
-import ChartComponent from './Chart/ChartComponent';
 import InformationComponent from './Information/InformationComponent';
 import TableComponent from './Table/TableComponent';
+import * as data from '../../stub/data.json';
 
 interface IHomeComponentState {
-  users: [];
+  details: any;
 }
 
 export default class HomeComponent extends React.Component<any, IHomeComponentState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      users: []
+      details: null
     };
   }
 
   componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/users`)
-      .then(res => {
-        const users = res.data;
-        this.setState({ users: users });
-      })
+    let value = data.value;
+    this.setState({ details: value });
   }
 
   public render() {
-    if (this.state.users) {
+    if (this.state.details) {
       return (
         <Layout>
           <div>
             <div className="container">
               <InformationComponent />
-              <TableComponent users={this.state.users} />
+              <TableComponent details={this.state.details} />
             </div>
           </div>
         </Layout>

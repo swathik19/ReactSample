@@ -2,20 +2,19 @@ import React from 'react';
 import TableChartComponent from './TableChartComponent';
 
 interface IRowComponentProps {
-    user: any;
-    id: number;
+    detail: any;
 }
 
 export default class RowComponent extends React.Component<IRowComponentProps, any> {
 
     public render() {
         return (
-            <tr id={this.props.user.id}>
-                <td className="text-info"><a href="#">{this.props.user.id}</a></td>
-                <td>{this.props.user.name}</td>
-                <td>{this.props.user.address.city}</td>
-                <td>{this.props.user.website}</td>
-                <td>{this.getChart()}</td>
+            <tr>
+                <td className="text-info">{this.props.detail.Team}</td>
+                <td>{this.props.detail.Primary_POC}</td>
+                <td>{this.props.detail.Workflow}</td>
+                <td>{this.props.detail.Status}</td>
+                <td>{this.props.detail.OpportunitySource_Category}</td>
             </tr>
         );
     }
@@ -24,7 +23,7 @@ export default class RowComponent extends React.Component<IRowComponentProps, an
         return (
             <div>
                 <div className="row">
-                    <TableChartComponent id={this.props.user.id} />
+                    <TableChartComponent id={this.props.detail.id} />
                 </div>
             </div>
         );

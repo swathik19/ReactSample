@@ -2,7 +2,7 @@ import React from 'react';
 import RowComponent from './RowComponents';
 
 interface ITableComponentProps {
-  users: [];
+  details: [];
 }
 
 export default class TableComponent extends React.Component<ITableComponentProps> {
@@ -22,11 +22,11 @@ export default class TableComponent extends React.Component<ITableComponentProps
         <table className="table table-striped table-borderless border">
           <thead>
             <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">City</th>
-              <th scope="col">Website</th>
-              <th scope="col">Chart</th>
+              <th scope="col">Team</th>
+              <th scope="col">Primary_POC</th>
+              <th scope="col">Workflow</th>
+              <th scope="col">Status</th>
+              <th scope="col">OpportunitySource_Category</th>
             </tr>
           </thead>
           <tbody>
@@ -38,8 +38,8 @@ export default class TableComponent extends React.Component<ITableComponentProps
   }
 
   private getRows() {
-    var rows = this.props.users.map((user, id) => {
-      return <RowComponent user={user} id={id} />
+    var rows = this.props.details.map((user, i) => {
+      return <RowComponent key={i} detail={user} />
     });
     return rows;
   }

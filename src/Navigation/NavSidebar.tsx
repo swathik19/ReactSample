@@ -7,7 +7,7 @@ export default class NavSidebar extends React.Component {
             <React.Fragment>
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-white bg-dark">
-                        <a className="navbar-brand text-white">Logo</a>
+                        <div className="navbar-brand text-white">Logo</div>
                         <button className="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
