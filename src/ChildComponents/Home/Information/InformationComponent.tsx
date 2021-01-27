@@ -6,10 +6,12 @@ export default class InformationComponent extends React.Component {
         return (
             <div className="container">
                 <div className="card-deck mb-3 text-center">
-                    <CardComponent header={"Hard Dollars Saved"} amount={50000} class="text-white bg-dark" />
-                    <CardComponent header={"Soft Dollars Saved"} amount={250000} class="bg-light"/>
-                    <CardComponent header={"Hard Dollars Saved For Customer"} amount={350000} class="text-white bg-dark"/>
-                    <CardComponent header={"Soft Dollars Saved For Cognizant"} amount={250000} class="bg-light"/>
+                    <CardComponent header={"Forecasted Benefit - Cognizant Revenue"} amount={50000} class="text-white bg-dark" />
+                    <CardComponent header={"Forecasted Benefit - Customer Revenue"} amount={250000} class="bg-light"/>
+                    <CardComponent header={"Forecasted Benefit - Cognizant Savings (Hard Dollar)"} amount={350000} class="text-white bg-dark"/>
+                    <CardComponent header={"Forecasted Benefit - Customer Savings (Hard Dollar)"} amount={250000} class="bg-light"/>
+                    <CardComponent header={"Forecasted Benefit - Cognizant Savings (Soft Dollar)"} amount={40000} class="text-white bg-dark"/>
+                    <CardComponent header={"Forecasted Benefit - Customer Savings (Soft Dollar)"} amount={10000} class="bg-light"/>
                 </div>
             </div>
         );

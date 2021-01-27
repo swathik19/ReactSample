@@ -22,18 +22,18 @@ export default class ChartComponent extends React.Component {
             },
 
             title: {
-                text: 'Total fruit consumption, grouped by gender'
+                text: 'Forecasted Benefits'
             },
 
             xAxis: {
-                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                categories: ['Cognizant Revenue', 'Customer Revenue', 'Cognizant Savings (Hard)', 'Customer Savings (Hard)', 'Cognizant Savings (Soft)', 'Customer Savings (Soft)']
             },
 
             yAxis: {
                 allowDecimals: false,
                 min: 0,
                 title: {
-                    text: 'Number of fruits'
+                    text: 'Benefits in Dollars'
                 }
             },
 
@@ -44,21 +44,17 @@ export default class ChartComponent extends React.Component {
             },
 
             series: [{
-                name: 'John',
-                data: [5, 3, 4, 7, 2],
-                stack: 'male'
+                name: 'QA',
+                data: [25000, 5000, 20000, 75000, 5000, 4300],
+                stack: 'QA'
             }, {
-                name: 'Joe',
-                data: [3, 4, 4, 2, 5],
-                stack: 'male'
+                name: 'CDE',
+                data: [30000, 8000, 21000, 35000, 5000, 4300],
+                stack: 'CDE'
             }, {
-                name: 'Jane',
-                data: [2, 5, 6, 2, 1],
-                stack: 'female'
-            }, {
-                name: 'Janet',
-                data: [3, 0, 4, 4, 3],
-                stack: 'female'
+                name: 'BA',
+                data: [10000, 15000, 22000, 15000, 5000, 4300],
+                stack: 'BA'
             }],
             renderTo:"mediamix#{akid.to_s}",
             credits: {

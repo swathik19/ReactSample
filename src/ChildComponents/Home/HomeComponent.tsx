@@ -4,6 +4,7 @@ import InformationComponent from './Information/InformationComponent';
 import TableComponent from './Table/TableComponent';
 import * as data from '../../stub/data.json';
 import axios from 'axios';
+import ChartComponent from './Chart/ChartComponent';
 
 interface IHomeComponentState {
   details: any;
@@ -28,10 +29,10 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
           "Content-Type": "application/json"
         },
       })
-      .then(res => {
-        const value = res.data.value;
-        this.setState({ details: value });
-      })
+        .then(res => {
+          const value = res.data.value;
+          this.setState({ details: value });
+        })
     }
   }
 
@@ -42,9 +43,10 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
           <div>
             <div className="container">
               <InformationComponent />
-              <TableComponent details={this.state.details} />
+              {/* <TableComponent details={this.state.details} /> */}
             </div>
           </div>
+          <ChartComponent />
         </Layout>
       );
     }
