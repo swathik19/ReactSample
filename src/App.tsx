@@ -1,11 +1,11 @@
 import React from 'react';
-import Router from './Router/Router';
+import AppContainer from './Container/AppContainer';
 
 export default class App extends React.Component {
   public render() {
     return (
       <div>
-        <Router />
+        <AppContainer />
       </div>
     );
   }

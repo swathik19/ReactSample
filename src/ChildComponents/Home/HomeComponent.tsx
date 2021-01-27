@@ -1,58 +1,29 @@
 import React from 'react';
-import Layout from '../../Navigation/Layout';
 import InformationComponent from './Information/InformationComponent';
 import TableComponent from './Table/TableComponent';
-import * as data from '../../stub/data.json';
-import axios from 'axios';
-import ChartComponent from './Chart/ChartComponent';
 
-interface IHomeComponentState {
+interface IHomeComponentProps {
   details: any;
 }
 
-export default class HomeComponent extends React.Component<any, IHomeComponentState> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      details: null
-    };
-  }
-
-  componentDidMount() {
-    if (process.env.NODE_ENV === "development") {
-      let value = data.value;
-      this.setState({ details: value });
-    }
-    else {
-      axios.get("https://cognizantonline.sharepoint.com/sites/TestWeb/_api/lists/getbytitle('ValueAddsList')/items", {
-        headers: {
-          "Content-Type": "application/json"
-        },
-      })
-        .then(res => {
-          const value = res.data.value;
-          this.setState({ details: value });
-        })
-    }
-  }
+export default class HomeComponent extends React.Component<IHomeComponentProps> {
 
   public render() {
-    if (this.state.details) {
+    if (this.props.details) {
       return (
-        <Layout>
           <div>
             <div className="container">
-              <InformationComponent details={this.state.details} />
-              <ChartComponent details={this.state.details} />
-              <TableComponent details={this.state.details} />
+              <InformationComponent details={this.props.details} />
+              <TableComponent details={this.props.details} />
             </div>
           </div>
-        </Layout>
       );
     }
     return (
-      <Layout>
-      </Layout>
-    );
+      <div>
+        <div className="container">
+        </div>
+      </div>
+  );
   }
 }
