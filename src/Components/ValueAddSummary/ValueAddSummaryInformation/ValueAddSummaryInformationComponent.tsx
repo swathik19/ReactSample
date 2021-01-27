@@ -1,11 +1,11 @@
 import React from 'react';
-import CardComponent from './CardComponent';
+import ValueAddSummaryInformationCardComponent from './ValueAddSummaryInformationCardComponent';
 
-interface IInformationComponentProps {
+interface IValueAddSummaryInformationComponentProps {
     details: [];
 }
 
-export default class InformationComponent extends React.Component<IInformationComponentProps> {
+export default class ValueAddSummaryInformationComponent extends React.Component<IValueAddSummaryInformationComponentProps> {
     public render() {
         return (
             <div className="container">
@@ -23,6 +23,6 @@ export default class InformationComponent extends React.Component<IInformationCo
 
     private getCardSectionDetails(cardTitle: string, cardFieldValue: string, className: string) {
         var benefitValue = this.props.details.reduce((sum, item) => sum + item[cardFieldValue], 0);
-        return <CardComponent header={cardTitle} amount={benefitValue} class={className} />
+        return <ValueAddSummaryInformationCardComponent header={cardTitle} amount={benefitValue} class={className} />
     }
 }

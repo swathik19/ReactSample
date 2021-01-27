@@ -2,11 +2,11 @@ import React from 'react';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 
-export interface ITableChartComponentProps {
+export interface ITeamwiseSummaryTableChartComponentProps {
     id: string;
 }
 
-export default class TableChartComponent extends React.Component<ITableChartComponentProps> {
+export default class TeamwiseSummaryTableChartComponent extends React.Component<ITeamwiseSummaryTableChartComponentProps> {
 
     public render() {
         return (

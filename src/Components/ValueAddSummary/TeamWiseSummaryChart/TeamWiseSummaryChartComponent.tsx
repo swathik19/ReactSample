@@ -2,11 +2,11 @@ import React from 'react';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 
-interface IChartComponentProps {
+interface ITeamWiseSummaryChartComponentProps {
     details: [];
 }
 
-export default class ChartComponent extends React.Component<IChartComponentProps> {
+export default class TeamWiseSummaryChartComponent extends React.Component<ITeamWiseSummaryChartComponentProps> {
     public render() {
         return (
             <div className="container">

@@ -1,11 +1,11 @@
 import React from 'react';
-import RowComponent from './RowComponents';
+import TeamwiseSummaryTableRowComponent from './TeamwiseSummaryTableRowComponents';
 
-interface ITableComponentProps {
+interface ITeamwiseSummaryTableComponentProps {
   details: [];
 }
 
-export default class TableComponent extends React.Component<ITableComponentProps> {
+export default class TeamwiseSummaryTableComponent extends React.Component<ITeamwiseSummaryTableComponentProps> {
 
   public render() {
     return (
@@ -39,7 +39,7 @@ export default class TableComponent extends React.Component<ITableComponentProps
 
   private getRows() {
     var rows = this.props.details.map((user, i) => {
-      return <RowComponent key={i} detail={user} />
+      return <TeamwiseSummaryTableRowComponent key={i} detail={user} />
     });
     return rows;
   }

@@ -1,9 +1,9 @@
 import axios from "axios";
 import React from "react";
-import HomeComponent from "../ChildComponents/Home/HomeComponent";
+import HomeComponent from "../Home/HomeComponent";
 import NavSidebar from "./NavSidebar";
-import * as data from '../stub/data.json';
-import ChartComponent from "../ChildComponents/Home/Chart/ChartComponent";
+import * as data from '../../stub/data.json';
+import TeamWiseSummaryChartComponent from "../ValueAddSummary/TeamWiseSummaryChart/TeamWiseSummaryChartComponent";
 
 export interface IAppContainerState {
     canRenderHome: boolean;
@@ -49,7 +49,7 @@ export default class AppContainer extends React.Component<any, IAppContainerStat
                         <section>
                             {this.state.canRenderHome ?
                                 <HomeComponent details={this.state.details} /> :
-                                <ChartComponent details={this.state.details} />}
+                                <TeamWiseSummaryChartComponent details={this.state.details} />}
                         </section>
                     </main>
                 </div>

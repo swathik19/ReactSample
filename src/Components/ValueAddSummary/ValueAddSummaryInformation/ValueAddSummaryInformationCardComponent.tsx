@@ -1,12 +1,12 @@
 import React from 'react';
 
-export interface ICardComponentProps {
+export interface IValueAddSummaryInformationCardComponentProps {
     header: string;
     amount: number;
     class: string;
 }
 
-export default class CardComponent extends React.Component<ICardComponentProps> {
+export default class ValueAddSummaryInformationCardComponent extends React.Component<IValueAddSummaryInformationCardComponentProps> {
     public render() {
         var classValue = "card mb-6 shadow-sm " + this.props.class;
         return (
