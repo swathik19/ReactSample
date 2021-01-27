@@ -42,11 +42,11 @@ export default class HomeComponent extends React.Component<any, IHomeComponentSt
         <Layout>
           <div>
             <div className="container">
-              <InformationComponent />
-              {/* <TableComponent details={this.state.details} /> */}
+              <InformationComponent details={this.state.details} />
+              <ChartComponent details={this.state.details} />
+              <TableComponent details={this.state.details} />
             </div>
           </div>
-          <ChartComponent />
         </Layout>
       );
     }

@@ -2,7 +2,11 @@ import React from 'react';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 
-export default class ChartComponent extends React.Component {
+interface IChartComponentProps {
+    details: [];
+}
+
+export default class ChartComponent extends React.Component<IChartComponentProps> {
     public render() {
         return (
             <div className="container">

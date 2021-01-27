@@ -7,7 +7,7 @@ export default class AboutComponent extends React.Component {
         return (
             <Layout>
                 <div className="container">
-                <ChartComponent/>
+                {/* <ChartComponent/> */}
                 </div>
             </Layout>
         );
