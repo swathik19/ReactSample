@@ -26,7 +26,7 @@ export default class TeamWiseSummaryChartComponent extends React.Component<ITeam
             },
 
             title: {
-                text: 'Forecasted Benefits'
+                text: 'Teamwise Summary- Forecasted Benefits'
             },
 
             xAxis: {

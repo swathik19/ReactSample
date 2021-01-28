@@ -1,16 +1,16 @@
 import React from 'react';
-import TeamwiseSummaryTableRowComponent from './TeamwiseSummaryTableRowComponents';
+import ValueAddListTableRowComponent from './ValueAddListTableRowComponents';
 
-interface ITeamwiseSummaryTableComponentProps {
+interface IValueAddListTableComponentProps {
   details: [];
 }
 
-export default class TeamwiseSummaryTableComponent extends React.Component<ITeamwiseSummaryTableComponentProps> {
+export default class ValueAddListTableComponent extends React.Component<IValueAddListTableComponentProps> {
 
   public render() {
     return (
       <div className="container">
-        <h2>Team-wise Savings Summary</h2>
+        <h2>Value-Adds List</h2>
         {this.getTable()}
       </div>
     );
@@ -23,10 +23,13 @@ export default class TeamwiseSummaryTableComponent extends React.Component<ITeam
           <thead>
             <tr>
               <th scope="col">Team</th>
-              <th scope="col">Primary_POC</th>
-              <th scope="col">Workflow</th>
+              <th scope="col">Primary POC</th>
+              <th scope="col">Date</th>
+              <th scope="col">Opportunity Title</th>
+              <th scope="col">Idea Title</th>
+              <th scope="col">Client Portfolio</th>
               <th scope="col">Status</th>
-              <th scope="col">OpportunitySource_Category</th>
+              <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -39,7 +42,7 @@ export default class TeamwiseSummaryTableComponent extends React.Component<ITeam
 
   private getRows() {
     var rows = this.props.details.map((user, i) => {
-      return <TeamwiseSummaryTableRowComponent key={i} detail={user} />
+      return <ValueAddListTableRowComponent key={i} detail={user} />
     });
     return rows;
   }
