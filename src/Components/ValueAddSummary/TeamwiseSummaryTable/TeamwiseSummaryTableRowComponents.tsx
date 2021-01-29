@@ -10,11 +10,15 @@ export default class TeamwiseSummaryTableRowComponent extends React.Component<IT
     public render() {
         return (
             <tr>
-                <td className="text-info">{this.props.detail.Team}</td>
-                <td>{this.props.detail.Primary_POC}</td>
-                <td>{this.props.detail.Workflow}</td>
-                <td>{this.props.detail.Status}</td>
-                <td>{this.props.detail.OpportunitySource_Category}</td>
+                <td className="text-info">{this.props.detail.teamName}</td>
+                <td>TBD</td>
+                <td>${this.props.detail.cognizantRevenue}</td>
+                <td>${this.props.detail.customerRevenue}</td>
+                <td>${this.props.detail.cognizantSavingsInHardDollar}</td>
+                <td>${this.props.detail.customerSavingsInHardDollar}</td>
+                <td>${this.props.detail.cognizantSavingsInSoftDollar}</td>
+                <td>${this.props.detail.customerSavingsInSoftDollar}</td>
+                <td>TBD</td>
             </tr>
         );
     }

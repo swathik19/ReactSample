@@ -15,8 +15,8 @@ export default class ValueAddSummaryPageComponent extends React.Component<IValue
           <div>
             <div className="container">
               <ValueAddSummaryInformationComponent details={this.props.details} />
-              <TeamwiseSummaryTableComponent details={this.props.details} />
               <TeamWiseSummaryChartComponent details={this.props.details} />
+              <TeamwiseSummaryTableComponent details={this.props.details} />
             </div>
           </div>
       );
