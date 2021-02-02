@@ -1,5 +1,5 @@
 import React from 'react';
-import ValueAddListTableRowComponent from './valueAddListTableRowComponents';
+import ValueAddListTableRowComponent from './ValueAddListTableRowComponents';
 
 interface IValueAddListTableComponentProps {
   details: [];
