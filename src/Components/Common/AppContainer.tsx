@@ -1,7 +1,7 @@
 import React from "react";
-import ValueAddSummaryPageComponent from "../ValueAddSummary/ValueAddSummaryPageComponent";
-import NavSidebar from "./NavSidebar";
-import ValueAddListTableComponent from "../ValueAddList/TeamwiseSummaryTable/ValueAddListTableComponent";
+import ValueAddSummaryPageComponent from "../valueAddSummary/valueAddSummaryPageComponent";
+import NavSidebar from "./navSidebar";
+import ValueAddListTableComponent from "../valueAddList/teamwiseSummaryTable/valueAddListTableComponent";
 
 export interface IAppContainerState {
     canRenderHome: boolean;

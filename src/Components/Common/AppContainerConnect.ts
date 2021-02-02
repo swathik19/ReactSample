@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { AnyAction, bindActionCreators, Dispatch } from "redux";
 import { getDetails } from "../../store/detailsActionCreators";
 import { DetailsState } from "../../store/type";
-import  AppContainer from "./AppContainer";
+import  AppContainer from "./appContainer";
 
 function mapStateToProps(appState: DetailsState, ownprops: any) {
     return {

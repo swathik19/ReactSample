@@ -1,5 +1,5 @@
 import React from 'react';
-import TeamwiseSummaryTableRowComponent from './TeamwiseSummaryTableRowComponents';
+import TeamwiseSummaryTableRowComponent from './teamwiseSummaryTableRowComponents';
 
 interface ITeamwiseSummaryTableComponentProps {
   details: [];

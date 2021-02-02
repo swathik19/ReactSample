@@ -1,5 +1,5 @@
 import React from 'react';
-import ValueAddSummaryInformationCardComponent from './ValueAddSummaryInformationCardComponent';
+import ValueAddSummaryInformationCardComponent from './valueAddSummaryInformationCardComponent';
 
 interface IValueAddSummaryInformationComponentProps {
     details: [];
