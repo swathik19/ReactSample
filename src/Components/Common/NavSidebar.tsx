@@ -20,6 +20,7 @@ export default class NavSidebar extends React.Component<INavSidebarProps> {
                         <div className="navbar-nav">
                             <div className="nav-link text-white" style={{ cursor: "pointer" }} onClick={() => { this.props.onNavClick(true) }}>Home <span className="sr-only">(current)</span></div>
                             <div className="nav-link text-white" style={{ cursor: "pointer" }} onClick={() => { this.props.onNavClick(false) }}>ValueAddList</div>
+                            <div className="nav-link text-white" style={{ cursor: "pointer" }} onClick={() => { this.props.onNavClick(false) }}>Test link</div>
                         </div>
                     </div>
                 </nav>
