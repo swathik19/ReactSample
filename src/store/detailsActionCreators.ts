@@ -5,35 +5,29 @@ import axios from "axios";
 
 
 export function getDetails() {
-  let details = getDetailsFromClient();
-  const action: DetailsAction = {
-    type: actionTypes.GET_DETAILS,
-    details: details,
-  }
 
-  return dispatch(action);
-}
-
-export function dispatch(action: DetailsAction) {
-  return (dispatch: (arg0: DetailsAction) => void) => {
-    setTimeout(() => {
-      dispatch(action)
-    }, 500)
-  }
-}
-
-function getDetailsFromClient(): any {
   if (process.env.NODE_ENV === "development") {
-    return data.value;
+    return (dispatch: (arg0: DetailsAction) => void) => {
+      setTimeout(() => {
+        dispatch({
+          type: actionTypes.GET_DETAILS,
+          details: data.value as any,
+        })
+      }, 500)
+    }
   }
   else {
     axios.get("https://cognizantonline.sharepoint.com/sites/TestWeb/_api/lists/getbytitle('ValueAddsList')/items", {
-      headers: {
-        "Content-Type": "application/json"
-      },
-    })
-      .then(res => {
-        return res.data.value;
-      })
+      headers: { "Content-Type": "application/json" },
+    }).then(response => {
+      return (dispatch: (arg0: DetailsAction) => void) => {
+        setTimeout(() => {
+          dispatch({
+            type: actionTypes.GET_DETAILS,
+            details: response.data.value,
+          })
+        }, 500)
+      }
+    });
   }
 }
