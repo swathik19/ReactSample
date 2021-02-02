@@ -1,40 +1,26 @@
-import axios from "axios";
 import React from "react";
 import ValueAddSummaryPageComponent from "../ValueAddSummary/ValueAddSummaryPageComponent";
 import NavSidebar from "./NavSidebar";
-import * as data from '../../stub/data.json';
-import TeamWiseSummaryChartComponent from "../ValueAddSummary/TeamWiseSummaryChart/TeamWiseSummaryChartComponent";
 import ValueAddListTableComponent from "../ValueAddList/TeamwiseSummaryTable/ValueAddListTableComponent";
 
 export interface IAppContainerState {
     canRenderHome: boolean;
-    details: any;
 }
 
-export default class AppContainer extends React.Component<any, IAppContainerState> {
-    constructor(props: any) {
+export interface IAppContainerProps {
+    getDetails: () => void;
+    details?: any;
+}
+
+export default class AppContainer extends React.Component<IAppContainerProps, IAppContainerState> {
+    constructor(props: IAppContainerProps) {
         super(props);
-        this.state = { canRenderHome: true, details: null }
+        this.state = { canRenderHome: true }
     }
 
     componentDidMount() {
-        if (process.env.NODE_ENV === "development") {
-            let value = data.value;
-            this.setState({ details: value });
-        }
-        else {
-            axios.get("https://cognizantonline.sharepoint.com/sites/TestWeb/_api/lists/getbytitle('ValueAddsList')/items", {
-                headers: {
-                    "Content-Type": "application/json"
-                },
-            })
-                .then(res => {
-                    const value = res.data.value;
-                    this.setState({ details: value });
-                })
-        }
+        this.props.getDetails();
     }
-
 
     public render() {
         return (
@@ -49,8 +35,8 @@ export default class AppContainer extends React.Component<any, IAppContainerStat
                     <main>
                         <section>
                             {this.state.canRenderHome ?
-                                <ValueAddSummaryPageComponent details={this.state.details} /> :
-                                <ValueAddListTableComponent details={this.state.details} />}
+                                <ValueAddSummaryPageComponent details={this.props.details} /> :
+                                <ValueAddListTableComponent details={this.props.details} />}
                         </section>
                     </main>
                 </div>
