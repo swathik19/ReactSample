@@ -17,17 +17,15 @@ export function getDetails() {
     }
   }
   else {
-    axios.get("https://cognizantonline.sharepoint.com/sites/TestWeb/_api/lists/getbytitle('ValueAddsList')/items", {
-      headers: { "Content-Type": "application/json" },
-    }).then(response => {
-      return (dispatch: (arg0: DetailsAction) => void) => {
-        setTimeout(() => {
-          dispatch({
-            type: actionTypes.GET_DETAILS,
-            details: response.data.value,
-          })
-        }, 500)
-      }
-    });
+    return (dispatch: (arg0: DetailsAction) => void) => {
+      axios.get("https://cognizantonline.sharepoint.com/sites/TestWeb/_api/lists/getbytitle('ValueAddsList')/items", {
+        headers: { "Content-Type": "application/json" },
+      }).then(response => {
+        dispatch({
+          type: actionTypes.GET_DETAILS,
+          details: response.data.value,
+        })
+      });
+    }
   }
 }
