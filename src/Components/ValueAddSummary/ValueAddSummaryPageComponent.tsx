@@ -1,7 +1,7 @@
 import React from 'react';
 import ValueAddSummaryInformationComponent from './ValueAddSummaryInformation/ValueAddSummaryInformationComponent';
 import TeamwiseSummaryTableComponent from './TeamwiseSummaryTable/TeamwiseSummaryTableComponent';
-import TeamWiseSummaryChartComponent from './TeamwiseSummaryChart/TeamwiseSummaryChartComponent';
+import TeamWiseSummaryChartComponent from './TeamWiseSummaryChart/TeamWiseSummaryChartComponent';
 
 interface IValueAddSummaryPageComponentProps {
   details: any;
